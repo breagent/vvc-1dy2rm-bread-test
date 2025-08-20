@@ -1,0 +1,127 @@
+{
+  "project": {
+    "name": "Bread Test",
+    "type": "static_html",
+    "description": "An extremely simple static HTML page featuring a massive bread emoji centered on a white background",
+    "status": "new",
+    "phone": "16503500601",
+    "github_repo": null
+  },
+  "requirements": {
+    "functional": {
+      "core_features": [
+        {
+          "id": "F001",
+          "name": "Display Bread Emoji",
+          "description": "Show a bread emoji (🍞) that fills the entire screen",
+          "priority": "must_have",
+          "acceptance_criteria": [
+            "Bread emoji is displayed",
+            "Emoji takes up most of the viewport",
+            "Emoji scales with screen size"
+          ]
+        },
+        {
+          "id": "F002",
+          "name": "Center Positioning",
+          "description": "The bread emoji must be perfectly centered on the screen",
+          "priority": "must_have",
+          "acceptance_criteria": [
+            "Horizontally centered",
+            "Vertically centered",
+            "Remains centered on window resize"
+          ]
+        },
+        {
+          "id": "F003",
+          "name": "White Background",
+          "description": "Pure white background with no other elements",
+          "priority": "must_have",
+          "acceptance_criteria": [
+            "Background color is #FFFFFF",
+            "No gradients or patterns",
+            "No other visual elements"
+          ]
+        }
+      ],
+      "constraints": [
+        "Must be a single static HTML file",
+        "No external dependencies",
+        "No JavaScript required",
+        "No CSS frameworks"
+      ]
+    },
+    "technical": {
+      "platform": "web",
+      "technology_stack": {
+        "frontend": ["HTML", "CSS (inline)"],
+        "backend": null,
+        "database": null,
+        "frameworks": []
+      },
+      "browser_support": ["Chrome", "Firefox", "Safari", "Edge"],
+      "responsive": true,
+      "performance_requirements": {
+        "load_time": "instant",
+        "file_size": "minimal"
+      }
+    },
+    "design": {
+      "style": "ultra-minimalist",
+      "color_scheme": {
+        "primary": "#FFFFFF",
+        "secondary": null,
+        "accent": null,
+        "text": null
+      },
+      "typography": {
+        "emoji": "🍞",
+        "font_size": "responsive (viewport units)",
+        "font_family": "system default for emoji"
+      },
+      "layout": {
+        "type": "single-element",
+        "alignment": "center",
+        "spacing": "none"
+      },
+      "visual_elements": [
+        {
+          "type": "emoji",
+          "content": "🍞",
+          "size": "massive",
+          "position": "center"
+        }
+      ]
+    },
+    "content": {
+      "text_content": [],
+      "images": [],
+      "emojis": ["🍞"],
+      "sections": []
+    }
+  },
+  "assumptions": [
+    {
+      "assumption": "Emoji size should use viewport units (e.g., 50vw) for responsive scaling",
+      "reasoning": "User wants it to 'fill the entire screen' which implies responsive sizing",
+      "alternative": "Could use fixed pixel size but would not be responsive"
+    },
+    {
+      "assumption": "File should be named index.html",
+      "reasoning": "Standard naming convention for main HTML file",
+      "alternative": "Could be named bread-test.html to match project name"
+    },
+    {
+      "assumption": "No page title or metadata needed",
+      "reasoning": "User emphasized 'nothing else' multiple times",
+      "alternative": "Could include minimal metadata for validity"
+    }
+  ],
+  "metadata": {
+    "extracted_at": "2025-08-20T12:52:50",
+    "extracted_by": "voice-requirements-analyst",
+    "source": "voice_conversation",
+    "conversation_id": "conv_2901k32g4f4gffda7z2j98rrcq0f",
+    "agent_id": "agent_3301k1hgh2g0e4h9pg7cyrgnzbqv"
+  }
+}
