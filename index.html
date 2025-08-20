@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bread Test</title>
+    <title>Emoji Explosion!</title>
     <style>
         * {
             margin: 0;
@@ -19,15 +19,261 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
         }
         
-        .bread {
-            font-size: 50vmin;
-            line-height: 1;
+        .emoji-container {
+            position: relative;
+            width: 90vmin;
+            height: 90vmin;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            animation: container-pulse 3s ease-in-out infinite;
+        }
+        
+        .emoji {
+            position: absolute;
+            animation: float 4s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+        
+        .emoji:hover {
+            transform: scale(1.3) rotate(10deg);
+            cursor: pointer;
+        }
+        
+        /* Center emoji - the bread */
+        .emoji-center {
+            font-size: 15vmin;
+            z-index: 10;
+            animation: spin-bounce 3s ease-in-out infinite;
+        }
+        
+        /* Ring 1 - Closest to center */
+        .emoji-ring1 {
+            font-size: 10vmin;
+        }
+        
+        .emoji1 {
+            top: 15%;
+            left: 45%;
+            animation-delay: 0s;
+        }
+        
+        .emoji2 {
+            top: 30%;
+            left: 75%;
+            animation-delay: 0.5s;
+        }
+        
+        .emoji3 {
+            top: 60%;
+            left: 70%;
+            animation-delay: 1s;
+        }
+        
+        .emoji4 {
+            top: 70%;
+            left: 40%;
+            animation-delay: 1.5s;
+        }
+        
+        .emoji5 {
+            top: 60%;
+            left: 15%;
+            animation-delay: 2s;
+        }
+        
+        .emoji6 {
+            top: 30%;
+            left: 15%;
+            animation-delay: 2.5s;
+        }
+        
+        /* Ring 2 - Outer ring */
+        .emoji-ring2 {
+            font-size: 8vmin;
+        }
+        
+        .emoji7 {
+            top: 5%;
+            left: 30%;
+            animation-delay: 0.3s;
+        }
+        
+        .emoji8 {
+            top: 5%;
+            left: 60%;
+            animation-delay: 0.8s;
+        }
+        
+        .emoji9 {
+            top: 20%;
+            left: 85%;
+            animation-delay: 1.3s;
+        }
+        
+        .emoji10 {
+            top: 50%;
+            left: 90%;
+            animation-delay: 1.8s;
+        }
+        
+        .emoji11 {
+            top: 80%;
+            left: 80%;
+            animation-delay: 2.3s;
+        }
+        
+        .emoji12 {
+            top: 85%;
+            left: 50%;
+            animation-delay: 2.8s;
+        }
+        
+        .emoji13 {
+            top: 80%;
+            left: 20%;
+            animation-delay: 0.1s;
+        }
+        
+        .emoji14 {
+            top: 50%;
+            left: 5%;
+            animation-delay: 0.6s;
+        }
+        
+        .emoji15 {
+            top: 20%;
+            left: 5%;
+            animation-delay: 1.1s;
+        }
+        
+        /* Special emojis with unique animations */
+        .emoji-sparkle {
+            font-size: 6vmin;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        .sparkle1 {
+            top: 10%;
+            left: 50%;
+            animation-delay: 0s;
+        }
+        
+        .sparkle2 {
+            top: 45%;
+            left: 85%;
+            animation-delay: 0.7s;
+        }
+        
+        .sparkle3 {
+            top: 75%;
+            left: 60%;
+            animation-delay: 1.4s;
+        }
+        
+        .sparkle4 {
+            top: 45%;
+            left: 10%;
+            animation-delay: 2.1s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-10px) rotate(5deg);
+            }
+            75% {
+                transform: translateY(10px) rotate(-5deg);
+            }
+        }
+        
+        @keyframes spin-bounce {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            25% {
+                transform: scale(1.1) rotate(10deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(-10deg);
+            }
+            75% {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+        
+        @keyframes sparkle {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.5) rotate(180deg);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes container-pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .emoji-center {
+                font-size: 12vmin;
+            }
+            .emoji-ring1 {
+                font-size: 8vmin;
+            }
+            .emoji-ring2 {
+                font-size: 6vmin;
+            }
+            .emoji-sparkle {
+                font-size: 4vmin;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="bread">🍞</div>
+    <div class="emoji-container">
+        <!-- Center bread emoji -->
+        <div class="emoji emoji-center">🍞</div>
+        
+        <!-- Ring 1 - Food emojis -->
+        <div class="emoji emoji-ring1 emoji1">🍕</div>
+        <div class="emoji emoji-ring1 emoji2">🍔</div>
+        <div class="emoji emoji-ring1 emoji3">🌮</div>
+        <div class="emoji emoji-ring1 emoji4">🍩</div>
+        <div class="emoji emoji-ring1 emoji5">🧁</div>
+        <div class="emoji emoji-ring1 emoji6">🥐</div>
+        
+        <!-- Ring 2 - Fun emojis -->
+        <div class="emoji emoji-ring2 emoji7">🎉</div>
+        <div class="emoji emoji-ring2 emoji8">🎨</div>
+        <div class="emoji emoji-ring2 emoji9">🚀</div>
+        <div class="emoji emoji-ring2 emoji10">🌈</div>
+        <div class="emoji emoji-ring2 emoji11">🎯</div>
+        <div class="emoji emoji-ring2 emoji12">🎪</div>
+        <div class="emoji emoji-ring2 emoji13">🎭</div>
+        <div class="emoji emoji-ring2 emoji14">🎸</div>
+        <div class="emoji emoji-ring2 emoji15">🎈</div>
+        
+        <!-- Sparkles -->
+        <div class="emoji emoji-sparkle sparkle1">✨</div>
+        <div class="emoji emoji-sparkle sparkle2">⭐</div>
+        <div class="emoji emoji-sparkle sparkle3">💫</div>
+        <div class="emoji emoji-sparkle sparkle4">🌟</div>
+    </div>
 </body>
 </html>
